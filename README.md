@@ -22,7 +22,7 @@ The is a project to add, edit, delete, view and manage employee schedules of an 
 
 ## My process
 
-The project is made using laravel, so i started with the view files then the controller functions and the tables in MYSQL and along with model files.
+The project is made using laravel, so I started with the view files then the controller functions and the tables in MYSQL and along with model files.
 
 ### Built with
 
