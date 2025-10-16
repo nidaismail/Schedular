@@ -18,7 +18,7 @@ The is a project to add, edit, delete, view and manage employee schedules of an 
 ### Links
 
 - Solution URL: [Github](https://github.com/nidaismail/Schedular)
-- Live Demo: [Scheduler](https://schedular.imdcollege.edu.pk/)
+- Live Demo: [Schedular](https://schedular.imdcollege.edu.pk/)
 
 ## My process
 
