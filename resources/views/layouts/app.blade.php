@@ -26,11 +26,13 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-teal shadow-sm">
             <div class="container">
-                @role('admin')
+                @hasanyrole('admin|Superadmin')
+                
                 <ul class="navbar-nav">
+                    @if (in_array(Auth::user()->userID, [2558, 126]))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/roles')}}" target="_blank">
-                            <i class="ni ni-key-25 text-info"></i> Users
+                        <a class="nav-link " href="{{url('/modify')}}">
+                            <i class="ni ni-key-25 text-info"></i> Edit
                         </a>
                     </li>
                     <li class="nav-item">
@@ -38,12 +40,19 @@
                             <i class="ni ni-single-02 text-yellow"></i> Dashboard
                         </a>
                     </li>
+                    @else
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{url('/admin')}}">
+                            <i class="ni ni-single-02 text-yellow"></i> Dashboard
+                        </a>
+                    </li>
+                    @endif
                 </ul>
                 @else
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Scheduling System') }}
                 </a>
-                @endrole
+                @endhasanyrole
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
